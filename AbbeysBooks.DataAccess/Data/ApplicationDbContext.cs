@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbbeysBookStore.Data
+namespace AbbeysBookStore.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

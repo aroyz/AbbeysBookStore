@@ -5,7 +5,7 @@ Program Purpose: Create a more advanced application using ASP.NET Core MVC
 Program Author: Abbey Roy
 Date Modified:
 
-// START @ 11:35AM 11-1-2021 //
+// START @ 11:35AM 11-01-2021 //
 11:35AM - Created AbbeysBookStore Application
 11:36AM - Created README
 11:39AM - Edited Startup.cs to remove "options => options.SignIn.RequireConfirmedAccount = true" on line 35
@@ -25,3 +25,17 @@ Date Modified:
 12:35PM - Added additional stylesheets and scripts to _Layout.cshtml
 12:48PM - Tried to push to github. Couldn't get it to work so uploaded to OneDrive.
 \\ END @ 12:51PM 11-1-2021 \\
+
+// START @ 10:24PM 11-02-2021 //
+10:24PM - Added dropdown
+10:31PM - ERROR, when running: System.IO.DirectoryNotFoundException: 'C:\Users\W0528897\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.8\staticwebassets\V4\'
+10:38PM - FIXED: Rebuilt solution and it ran fine.
+10:40PM - Changed "Dropdown" to "Content Management"
+10:42PM - Created .DataAccess, .Models, and .Utility packages
+10:45PM - Moved Data folder to .DataAccess project
+10:46PM - Downloaded required packages
+10:53PM - Deleted Migrations folder
+10:55PM - Modified namespace of ApplicationDbContext.cs in .DataAccess project
+10:58PM - Deleted all default Class1.cs files
+11:04PM - Got tired! Uploaded everything to GitHub
+\\ END @ 11:04PM 10-02-2021 \\
