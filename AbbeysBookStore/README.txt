@@ -22,3 +22,6 @@ Date Modified:
 12:18PM - Changed text-muted color to be #c3cce8, which is slightly lighter than it was before (because I thought it was too hard to read when it was darker)
 12:22PM - Started going back through slides because Andrew told me I'll miss things if I don't go through the slides in presentation mode!
 12:25PM - Push to Github
+12:35PM - Added additional stylesheets and scripts to _Layout.cshtml
+12:48PM - Tried to push to github. Couldn't get it to work so uploaded to OneDrive.
+\\ END @ 12:51PM 11-1-2021 \\
