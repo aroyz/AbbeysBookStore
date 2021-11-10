@@ -39,3 +39,19 @@ Date Modified:
 10:58PM - Deleted all default Class1.cs files
 11:04PM - Got tired! Uploaded everything to GitHub
 \\ END @ 11:04PM 10-02-2021 \\
+
+// START @ 9:18AM 11-03-2021 //
+9:18AM  - Moved Models folder to .Models, renamed it to ViewModels, and added project references
+9:25AM  - Modified Error.cshtml to reference correct Model
+9:28AM  - Changed ErrorViewModels namespace to AbbeysBookStore.Models.ViewModels
+9:35AM  - ERROR, when building: There were a few reference errors where the code still referenced the old locations of the Data and Models folder.
+9:43AM  - FIXED: Updated the references. Build successful.
+9:45AM  - Created SD.cs in .Utility project and modified the class properties
+9:49AM  - Added project references
+9:50AM  - Added Customers area and changed routes in Startup.cs
+9:54AM  - Moved HomeController.cs to new Customer area's Controllers folder, removed the Data and Models folders, and modified HomeController.cs to define that it's in the Customer Area
+9:58PM  - Moved Views > Home folder to Customer's Views folder and modified HomeController.cs namespace
+10:02AM - Copied _ViewImport and _ViewStart to Customer Area and modified _ViewStart to point to correct _Layout location
+10:06AM - Added Admin Area and copied _ViewImports and _ViewStart to its views folder
+10:10AM - Build application. Success!
+\\ END @ 10:11AM 11-03-2021 \\
