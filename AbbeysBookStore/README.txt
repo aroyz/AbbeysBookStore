@@ -12,7 +12,8 @@ Date Modified:
 11:41AM - Downloaded and replaced bootstrap.css for the Morph theme from Bootswatch
 11:45AM - Replaced site.css with the one provided 
 11:49AM - Modified _Layout.cshtml to use bootstrap.css instead of bootstrap.min.css, change the nav class from navbar-light to navbar dark and bg-white to bg-primary, and remove text-dark class from the links
-11:54AM - ERROR: Application won't run because school computers don't like HTTPS. Modified launchSettings.json to comment out SSL to run on college computers.
+11:54AM - ERROR: Application won't run because school computers don't like HTTPS. 
+          FIXED: Modified launchSettings.json to comment out SSL to run on college computers.
 12:02PM - Changed value of --bs-primary-rgb in bootstrap.css because I didn't like it
 12:05PM - Remove text-dark class from links in _LoginPartial.cshtml
 12:06PM - Added text-dark class to footer container in _Layout.cshtml
@@ -29,7 +30,7 @@ Date Modified:
 // START @ 10:24PM 11-02-2021 //
 10:24PM - Added dropdown
 10:31PM - ERROR, when running: System.IO.DirectoryNotFoundException: 'C:\Users\W0528897\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.8\staticwebassets\V4\'
-10:38PM - FIXED: Rebuilt solution and it ran fine.
+          FIXED: Rebuilt solution and it ran fine.
 10:40PM - Changed "Dropdown" to "Content Management"
 10:42PM - Created .DataAccess, .Models, and .Utility packages
 10:45PM - Moved Data folder to .DataAccess project
@@ -45,7 +46,7 @@ Date Modified:
 9:25AM  - Modified Error.cshtml to reference correct Model
 9:28AM  - Changed ErrorViewModels namespace to AbbeysBookStore.Models.ViewModels
 9:35AM  - ERROR, when building: There were a few reference errors where the code still referenced the old locations of the Data and Models folder.
-9:43AM  - FIXED: Updated the references. Build successful.
+          FIXED: Updated the references. Build successful.
 9:45AM  - Created SD.cs in .Utility project and modified the class properties
 9:49AM  - Added project references
 9:50AM  - Added Customers area and changed routes in Startup.cs
@@ -56,5 +57,11 @@ Date Modified:
 10:10AM - Build application. Success!
 \\ END @ 10:11AM 11-03-2021 \\
 
-// START @ 9:26AM 11-10-2021 //
+// START @ 9:19AM 11-10-2021 //
+9:19AM  - Committed files finished files from part 1 of assignment. It worked this time! Not sure why but I'm not going to look a gift horse in the mouth.
 9:26AM  - ERROR: Application won't build. Need to pick a startup item but I don't know what to pick. I tried a few things but none of them work.
+		  FIXED: I had opened the application wrong in Visual Studio. Opened it correctly and it runs!
+9:48AM  - Created initial migration. File name: 20211110144758_AddDefaultIdentityMigration.cs
+9:50AM  - Updated Database
+9:51AM  - Ran application. No errors.
+
