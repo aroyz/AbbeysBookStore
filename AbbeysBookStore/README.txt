@@ -71,3 +71,6 @@ Date Modified:
 10:12AM - Updated database
 10:15AM - Checked SQL Server Object Explorer. Everything is there.
 10:19AM - Pushed changes to GitHub.
+10:23AM - Created Repository and iRepository folders
+10:33AM - Created iRepository.cs file
+10:38AM - Pushed to GitHub
