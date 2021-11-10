@@ -64,4 +64,10 @@ Date Modified:
 9:48AM  - Created initial migration. File name: 20211110144758_AddDefaultIdentityMigration.cs
 9:50AM  - Updated Database
 9:51AM  - Ran application. No errors.
-
+9:53AM  - Created Category class
+10:04AM - Added new migration. File name: 20211110150313_AddCategoryToDb.cs
+10:05AM - Modified ApplicationDbContext.cs to add Category model
+10:08AM - Deleted original AddCategoryToDb migration and created a new AddCategoryToDb migration. File name: 20211110151226_AddCategoryToDb.cs
+10:12AM - Updated database
+10:15AM - Checked SQL Server Object Explorer. Everything is there.
+10:19AM - Pushed changes to GitHub.
