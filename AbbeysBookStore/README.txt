@@ -55,3 +55,6 @@ Date Modified:
 10:06AM - Added Admin Area and copied _ViewImports and _ViewStart to its views folder
 10:10AM - Build application. Success!
 \\ END @ 10:11AM 11-03-2021 \\
+
+// START @ 9:26AM 11-10-2021 //
+9:26AM  - ERROR: Application won't build. Need to pick a startup item but I don't know what to pick. I tried a few things but none of them work.
