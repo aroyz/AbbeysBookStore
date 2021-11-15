@@ -96,7 +96,8 @@ Date Modified:
 7:04AM  - Modified _Layout.cshtml to move Category link
 7:07AM  - Ran. No Build Errors.
 7:15AM  - Push to github.
-7:17AM  - Added and called category.js
+7:16AM  - Created new migration because I switched computers and it wasn't working 20211115123319_ComputerChangeMigration.cs + updated database
+7:18AM  - Added and called category.js
 7:24AM  - Modified CategoryController.cs to add IActionResult Upsert
 7:28AM  - Created and modified Upsert.cshtml
 7:33AM  - Created and edited partial views for Edit and Back
@@ -107,3 +108,11 @@ Date Modified:
 8:55AM  - Tested. Everything works :)
 8:57AM  - Uploaded to Github
 \\ END @ 8:57AM 11-15-2021 \\
+
+// START @ 11:16AM 11-15-2021 //
+11:16AM - Uncommented [HttpPost] in CategoryController.cs file that was breaking my code for some reason at home. It works now just fine :)
+11:21AM - Fiddled with styles
+11:43AM - ERROR: Whoops I was wrong the [HttpPost] line still breaks my code for some reason :( Andrew says he'll look at it after marking.
+12:12PM - Marked! :)
+12:15PM - Pushed to Github
+\\ END @ 12:15PM 11-15-2021 \\
