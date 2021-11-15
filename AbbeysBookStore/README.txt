@@ -96,3 +96,14 @@ Date Modified:
 7:04AM  - Modified _Layout.cshtml to move Category link
 7:07AM  - Ran. No Build Errors.
 7:15AM  - Push to github.
+7:17AM  - Added and called category.js
+7:24AM  - Modified CategoryController.cs to add IActionResult Upsert
+7:28AM  - Created and modified Upsert.cshtml
+7:33AM  - Created and edited partial views for Edit and Back
+7:46AM  - Modified Upsert.cshtml and Index.cshtml
+7:53AM  - Modified CatgoryController.cs to create Upsert POST action method
+8:41AM  - Whoops forgot to keep updating this. Did a whole bunch of stuff. Sorry!
+8:42AM  - Added the API call for HTTPDelete and implemented it in category.js
+8:55AM  - Tested. Everything works :)
+8:57AM  - Uploaded to Github
+\\ END @ 8:57AM 11-15-2021 \\

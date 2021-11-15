@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace AbbeysBooks.DataAccess.Repository
 {
-    public class UnitOfWork : IUnitOfWork //make the method public to access the class
+    public class IUnitOfWork : IRepository.IUnitOfWork //make the method public to access the class
     {
         private readonly ApplicationDbContext _db; //the using statement
 
-        public UnitOfWork(ApplicationDbContext db) //constructor to use DI and inject into the repositories
+        public IUnitOfWork(ApplicationDbContext db) //constructor to use DI and inject into the repositories
         {
             _db = db;
             Category = new CategoryRepository(_db);

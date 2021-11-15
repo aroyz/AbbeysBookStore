@@ -36,7 +36,7 @@ namespace AbbeysBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<UnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, IUnitOfWork>();
             services.AddControllersWithViews();
         }
 
