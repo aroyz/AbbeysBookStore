@@ -87,3 +87,12 @@ Date Modified:
 6:05AM  - Modified Startup.cs
 6:10AM  - Ran. No Build Errors.
 6:12AM  - Push to github.
+6:14AM  - Created and modified CategoryController.cs
+6:19AM  - ERROR: A bunch of stuff suddenly broke.
+          FIXED: Figured out that I somehow accidentally deleted IRepository.cs file.
+6:32AM  - Finished modifying CategoryController.cs
+6:54AM  - Add new Category View
+7:02AM  - Ran. No Build Errors.
+7:04AM  - Modified _Layout.cshtml to move Category link
+7:07AM  - Ran. No Build Errors.
+7:15AM  - Push to github.
