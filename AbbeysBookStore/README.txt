@@ -81,4 +81,9 @@ Date Modified:
 4:58AM  - Create and edit Repository.cs class
 5:12AM  - Created and edited CategoryRepository.cs and ICategoryRepository.cs
 5:22AM  - Ran. No Build Errors.
-5:25AM  - Push to github.
+5:24AM  - Push to github.
+5:26AM  - Create and edit ISP_Call.cs and SP_Call.cs
+5:54AM  - Create and edit IUnitOfWork.cs and UnitOfWork.cs
+6:05AM  - Modified Startup.cs
+6:10AM  - Ran. No Build Errors.
+6:12AM  - Push to github.

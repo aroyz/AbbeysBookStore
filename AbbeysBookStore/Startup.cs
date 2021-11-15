@@ -1,3 +1,5 @@
+using AbbeysBooks.DataAccess.Repository.IRepository;
+using AbbeysBooks.DataAccess.Repository;
 using AbbeysBookStore.DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +36,7 @@ namespace AbbeysBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<UnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
         }
 
