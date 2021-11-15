@@ -74,3 +74,11 @@ Date Modified:
 10:23AM - Created Repository and iRepository folders
 10:33AM - Created iRepository.cs file
 10:38AM - Pushed to GitHub
+\\ END @ 10:38AM 11-10-2021 \\
+
+// START @ 4:53AM 11-15-2021 //
+4:53AM  - Check everything over
+4:58AM  - Create and edit Repository.cs class
+5:12AM  - Created and edited CategoryRepository.cs and ICategoryRepository.cs
+5:22AM  - Ran. No Build Errors.
+5:24AM  - Push to github.
