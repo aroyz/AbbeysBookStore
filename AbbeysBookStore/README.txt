@@ -116,3 +116,13 @@ Date Modified:
 12:12PM - Marked! :)
 12:15PM - Pushed to Github
 \\ END @ 12:15PM 11-15-2021 \\
+
+// START @ 2:35AM 11-24-2021 //
+2:35AM - Created and Modified CoverType.cs
+2:42AM - Added migration 20211124074300_AddCoverTypeToDb
+2:44AM - Added CoverType to ApplicationDbContext
+2:46AM - Re-ran add-migration, file created: 20211124074653_AddCoverTypeToDb.cs
+2:47AM - Update Database
+2:50AM - Created and modified ICoverTypeRepository.cs and CoverTypeRepository.cs
+2:53AM - Ran. No Build Errors.
+2:56AM - Pushed to Github
