@@ -129,3 +129,7 @@ Date Modified:
 3:05AM - Updated UnitOfWork.cs & IUnitOfWork.cs
 3:08AM - Ran. No Build Errors.
 3:10AM - Pushed to Github
+3:11AM - Created and modified the CoverTypeController.cs file
+3:15AM - Created and modified the Index.cshtml, Upsert.cshtml, _CreateAndBackToListButton.cshtml, and _EditAndBackToListButton.cshtml files in the Views\CoverType folder + coverType.js in wwwroot\js folder
+3:22AM - Ran. No Build Errors.
+3:24AM - Pushed to Github.
