@@ -151,4 +151,8 @@ Date Modified:
 5:01AM - Updated _Layout.cshtml
 5:05AM - Ran. Got an error but the slides say to ignore it for now.
 5:07AM - Push to Github
+5:08AM - Update Upsert method
+5:15AM - Oh! I only have to do up to section 2! :)
+5:17AM - Push to Github
+\\ END @ 5:17AM 11-24-2021 \\
 
