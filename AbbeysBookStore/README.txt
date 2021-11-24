@@ -119,7 +119,7 @@ Date Modified:
 
 // START @ 2:35AM 11-24-2021 //
 2:35AM - Created and Modified CoverType.cs
-2:42AM - Added migration 20211124074300_AddCoverTypeToDb
+2:42AM - Added migration 20211124074300_AddCoverTypeToDb.cs
 2:44AM - Added CoverType to ApplicationDbContext
 2:46AM - Re-ran add-migration, file created: 20211124074653_AddCoverTypeToDb.cs
 2:47AM - Update Database
@@ -133,3 +133,14 @@ Date Modified:
 3:15AM - Created and modified the Index.cshtml, Upsert.cshtml, _CreateAndBackToListButton.cshtml, and _EditAndBackToListButton.cshtml files in the Views\CoverType folder + coverType.js in wwwroot\js folder
 3:22AM - Ran. No Build Errors.
 3:24AM - Pushed to Github.
+3:25AM - Updated _Layout.cshtml to add link to CoverType page
+3:41AM - ERROR: When I update an entry on the CoverType table it updates it on the Category table instead. The Create and Delete methods work but not update for some reason. FIXED: Accidentally forgot to change Categories to CoverTypes in Update method of CoverTypeRepository.cs
+3:45AM - Create and modify Product.cs in .Models project
+3:52AM - Update ApplicationDbContext.cs
+3:54AM - Added migration 20211124085359_AddProductToDb.cs + update-database
+3:55AM - Updated Product class
+3:56AM - Added migration 20211124085647_AddValidationToProduct.cs + update-database
+4:01AM - Created and modified IProductRepository.cs and ProductRepository.cs
+4:08AM - Updated UnitOfWork.cs & IUnitOfWork.cs
+4:12AM - Ran. No Build Errors.
+4:14AM - Pushed to Github.

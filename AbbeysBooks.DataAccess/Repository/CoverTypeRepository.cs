@@ -20,7 +20,7 @@ namespace AbbeysBooks.DataAccess.Repository
         {
             //use .NET LINQ to retrieve the first or default category object,
             //then padd the id as a generic entity which matches the category ID
-            var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == coverType.Id);
+            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == coverType.Id);
             if (objFromDb != null) //save changes if not null
             {
                 objFromDb.Name = coverType.Name;
