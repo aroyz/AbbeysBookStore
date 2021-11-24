@@ -160,3 +160,4 @@ Date Modified:
 9:25AM  - Update database
 10:00AM - Finally fixed my error! I had an extra space in my ProductController.cs file in includeProperties
 10:04AM - Push to Github
+\\ END @ 10:39AM 11-24-2021 \\ 
