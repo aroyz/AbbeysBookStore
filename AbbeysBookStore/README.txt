@@ -144,3 +144,6 @@ Date Modified:
 4:08AM - Updated UnitOfWork.cs & IUnitOfWork.cs
 4:12AM - Ran. No Build Errors.
 4:14AM - Pushed to Github.
+4:15AM - Created and modified ProductVM.cs
+4:33AM - Installed dependencies & modified ProductController.cs
+4:51AM - Push to Github
