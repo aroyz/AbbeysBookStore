@@ -147,3 +147,8 @@ Date Modified:
 4:15AM - Created and modified ProductVM.cs
 4:33AM - Installed dependencies & modified ProductController.cs
 4:51AM - Push to Github
+4:52AM - Created Product Views & product.js
+5:01AM - Updated _Layout.cshtml
+5:05AM - Ran. Got an error but the slides say to ignore it for now.
+5:07AM - Push to Github
+
