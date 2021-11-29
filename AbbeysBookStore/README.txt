@@ -161,3 +161,12 @@ Date Modified:
 10:00AM - Finally fixed my error! I had an extra space in my ProductController.cs file in includeProperties
 10:04AM - Push to Github
 \\ END @ 10:39AM 11-24-2021 \\ 
+
+// START @ 11:23AM 11-29-2021 //
+11:23AM - Created Tinycloud account and added rich text box + input validation
+11:47AM - ERROR: Crashing when I tried to open the product page.
+          FIXED: Had to update-database. Works now.
+11:53AM - ERROR: Upsert page couldn't be found.
+          FIXED: It was still commented out from one of the previous steps. Uncommented it and it works now.
+12:09AM - Updated ProductController.cs
+12:25AM - Uploaded to Github

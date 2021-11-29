@@ -28,40 +28,59 @@ namespace AbbeysBookStore.Areas.Admin.Controllers
             return View();
         }
 
-        /*
+
         //use HTTP POST to define the post-action method
+        //need to update this code
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        public IActionResult Upsert(int? id) //action method for Upsert
+        //public IActionResult Upsert(int? id) //action method for Upsert
+        //{
+        //    ProductVM productVM = new ProductVM()
+        //    {
+        //        Product = new Product(),
+        //        CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+        //        {
+        //            Text = i.Name,
+        //            Value = i.Id.ToString()
+        //        }),
+        //        CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+        //        {
+        //            Text = i.Name,
+        //            Value = i.Id.ToString()
+        //        }),
+        //    };
+        //    if (id == null)
+        //    {
+        //        //this is for create
+        //        return View(productVM);
+        //    }
+        //    //this is for the edit
+        //    productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
+        //    if (productVM.Product == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(productVM);
+        //}
+
+        public IActionResult Upsert(Product product)
         {
-            ProductVM productVM = new ProductVM()
+            if (ModelState.IsValid)
             {
-                Product = new Product(),
-                CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                if (product.Id == 0)
                 {
-                    Text = i.Name,
-                    Value = i.Id.ToString()
-                }),
-                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                    _unitOfWork.Product.Add(product);
+                }
+                else
                 {
-                    Text = i.Name,
-                    Value = i.Id.ToString()
-                }),
-            };
-            if (id == null)
-            {
-                //this is for create
-                return View(productVM);
+                    _unitOfWork.Product.Update(product);
+                }
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
             }
-            //this is for the edit
-            productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
-            if (productVM.Product == null)
-            {
-                return NotFound();
-            }
-            return View(productVM);
+            return View(product);
         }
-        */
+
 
         #region API CALLS
         [HttpGet]
