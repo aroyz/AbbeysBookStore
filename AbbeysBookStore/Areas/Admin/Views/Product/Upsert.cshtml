@@ -77,7 +77,7 @@
                     Cover Type
                 </div>
                 <div class="col-8">
-                    @Html.DropDownListFor(m => m.Product.CategoryId, Model.CategoryList, "-Select a Cover Type",
+                    @Html.DropDownListFor(m => m.Product.CoverTypeId, Model.CoverTypeList, "-Select a Cover Type",
                    new { @class = "form-control" })
                     <span asp-validation-for="Product.CoverTypeId" class="text-danger"></span>
                 </div>
@@ -114,7 +114,7 @@
 </form>
 
 @section Scripts {
-    <!-- <partial name="_ValidationScriptPartial" /> -->
+    <partial name="_ValidationScriptsPartial" />
     <script src="https://cdn.tiny.cloud/1/7aupod3z6pd1x2fi53miec3t8bko6b4zre7s1ie0bayocbqr/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     
     <script>

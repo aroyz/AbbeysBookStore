@@ -170,3 +170,12 @@ Date Modified:
           FIXED: It was still commented out from one of the previous steps. Uncommented it and it works now.
 12:09AM - Updated ProductController.cs
 12:25AM - Uploaded to Github
+\\ END @ 12:25AM 11-29-2021 \\
+
+// START @ 10:03PM 11-30-2021 //
+10:03PM - Testing. Error with my database because I accidentally called two things CategoryId.
+10:21PM - Create new migration
+12:22AM - Whoops I got really invested into figuring out all the errors that were cropping up. I had a cascade of errors where trying to solve one just created a bunch more. There were a few things wrong in the product.js file that I had to fix because it was using the wrong names for table data. I also spent some time fixing my upsert method because I didn't realize I was supposed to keep both of them and had to troubleshoot why it wasn't working.
+12:28AM - Tested! Everything works :)
+12:32AM - Uploaded to Github.
+\\ END @ 12:32AM  12-01-2021 \\

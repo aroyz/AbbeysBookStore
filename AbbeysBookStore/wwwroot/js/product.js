@@ -1,4 +1,6 @@
-﻿var dataTable;
+﻿//const { data } = require("jquery");
+
+var dataTable;
 
 $(document).ready(function () {
     loadDataTable();
@@ -6,6 +8,13 @@ $(document).ready(function () {
 
 
 function loadDataTable() {
+    let tableData;
+    $.ajax({
+        url: "/Admin/Product/GetAll"
+    }).done(function (data) {
+        tableData = data.data[0];
+        console.log(tableData);
+    });
     dataTable = $('#tblData').DataTable({
         "ajax": {
             "url": "/Admin/Product/GetAll"
@@ -13,9 +22,9 @@ function loadDataTable() {
         "columns": [
             { "data": "title", "width": "15%" },
             { "data": "isbn", "width": "15%" },
-            { "data": "price", "width": "15%" },
+            { "data": "listPrice", "width": "15%" },
             { "data": "author", "width": "15%" },
-            { "data": "category.Name", "width": "15%" },
+            { "data": "category.name", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
