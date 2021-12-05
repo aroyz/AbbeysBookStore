@@ -179,3 +179,14 @@ Date Modified:
 12:28AM - Tested! Everything works :)
 12:32AM - Uploaded to Github.
 \\ END @ 12:32AM  12-01-2021 \\
+
+// START @ 8:14PM 12-04-2021 //
+8:14PM  - Updated ProductController.cs to upload images to server.
+8:48PM  - ERROR: Images aren't uploading correctly. Says it can't find file path.
+         FIXED: Whoops I'm dumb. My images/products folder in wwwroot didn't exist on my system but it showed up in the solution explorer in Visual Studio just with an x next to it. I thought that meant it wasn't uploaded to Github because it was empty but apparently not. 
+9:13PM  - Updated product.js to include image on in product table.
+9:25PM  - Started fiddling with how the table is displayed to make it look better.
+10:53PM - Whoops got distracted. Now adding more books to the database.
+11:08PM - Updated project.js to format the currency.
+11:23PM - Done :) Pushed to Github.
+\\ END @ 11:23PM 12-04-2021 \\

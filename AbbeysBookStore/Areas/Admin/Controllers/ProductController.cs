@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -67,12 +68,51 @@ namespace AbbeysBookStore.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(ProductVM productVM) //action method for Upsert
         {
+            System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(productVM.Product));
             if (ModelState.IsValid)
             {
+                string webRootPath = _hostEnvironment.WebRootPath;
+                System.Diagnostics.Debug.WriteLine("Web Root Path: " + webRootPath);
+                var files = HttpContext.Request.Form.Files;
+                System.Diagnostics.Debug.WriteLine("Files: " + JsonConvert.SerializeObject(files));
+                if (files.Count > 0)
+                {
+                    string fileName = Guid.NewGuid().ToString();
+                    System.Diagnostics.Debug.WriteLine("File Name: " + fileName);
+                    var uploads = Path.Combine(webRootPath, @"images\products");
+                    System.Diagnostics.Debug.WriteLine("Uploads: " + JsonConvert.SerializeObject(uploads));
+                    var extension = Path.GetExtension(files[0].FileName);
+                    System.Diagnostics.Debug.WriteLine("Extension: " + JsonConvert.SerializeObject(extension));
+
+                    if (productVM.Product.ImageUrl != null)
+                    {
+                        // this is an edit and we need to remove old image
+                        var imagePath = Path.Combine(webRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(imagePath))
+                        {
+                            System.IO.File.Delete(imagePath);
+                        }
+                    }
+                    System.Diagnostics.Debug.WriteLine("FileStream Path: " + JsonConvert.SerializeObject(Path.Combine(uploads, fileName + extension)));
+                    using (var filesStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                    {
+                        files[0].CopyTo(filesStreams);
+                    }
+                    productVM.Product.ImageUrl = @"\images\products\" + fileName + extension;
+                }
+                else
+                {
+                    // update when they do not change the image
+                    if (productVM.Product.Id != 0)
+                    {
+                        Product objFromDb = _unitOfWork.Product.Get(productVM.Product.Id);
+                        productVM.Product.ImageUrl = objFromDb.ImageUrl;
+                    }
+                }
+
                 if (productVM.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(productVM.Product);
-                    System.Diagnostics.Debug.WriteLine(JsonConvert.SerializeObject(productVM.Product));
                 }
                 else
                 {
@@ -80,6 +120,23 @@ namespace AbbeysBookStore.Areas.Admin.Controllers
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+                productVM.CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+                if (productVM.Product.Id != 0)
+                {
+                    productVM.Product = _unitOfWork.Product.Get(productVM.Product.Id);
+                }
             }
             return View(productVM);
         }

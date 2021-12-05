@@ -20,11 +20,26 @@ function loadDataTable() {
             "url": "/Admin/Product/GetAll"
         },
         "columns": [
-            { "data": "title", "width": "15%" },
-            { "data": "isbn", "width": "15%" },
-            { "data": "listPrice", "width": "15%" },
-            { "data": "author", "width": "15%" },
-            { "data": "category.name", "width": "15%" },
+            {
+                "data": "imageUrl",
+                "render": function (data) {
+                    return `
+                        <img src="${data}" width="100px" />
+                    `;
+                },
+                "width": "14%"
+            },
+            { "data": "title", "width": "14%" },
+            { "data": "isbn", "width": "14%" },
+            {
+                "data": "listPrice",
+                "render": function (data) {
+                    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'CAD' }).format(data);
+                },
+                "width": "14%"
+            },
+            { "data": "author", "width": "14%" },
+            { "data": "category.name", "width": "14%" },
             {
                 "data": "id",
                 "render": function (data) {
@@ -38,7 +53,7 @@ function loadDataTable() {
                                 </a>
                             </div>
                             `;
-                }, "width": "40%"
+                }, "width": "16%"
             }
         ]
     });
