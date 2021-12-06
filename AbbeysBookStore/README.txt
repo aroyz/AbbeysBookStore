@@ -190,3 +190,8 @@ Date Modified:
 11:08PM - Updated project.js to format the currency.
 11:23PM - Done :) Pushed to Github.
 \\ END @ 11:23PM 12-04-2021 \\
+
+// START @ 11:08AM 12-06-2021 //
+11:08AM - Repopulated Books
+11:14AM - Pushed to Github
+\\ END @ 11:14AM 12-06-2021 \\
