@@ -1,4 +1,7 @@
-﻿using AbbeysBookStore.Models.ViewModels;
+﻿using AbbeysBooks.DataAccess.Repository;
+using AbbeysBooks.Models;
+using AbbeysBooks.Models.ViewModels;
+using AbbeysBookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,21 +10,24 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AbbeysBookStore.Area.Customer.Controllers
+namespace AbbeysBooks.Areas.Customer.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unifOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unifOfWork)
         {
             _logger = logger;
+            _unifOfWork = unifOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> productList = _unifOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return View(productList);
         }
 
         public IActionResult Privacy()
