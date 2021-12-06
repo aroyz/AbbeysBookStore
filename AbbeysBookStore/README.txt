@@ -195,3 +195,8 @@ Date Modified:
 11:08AM - Repopulated Books
 11:14AM - Pushed to Github
 \\ END @ 11:14AM 12-06-2021 \\
+
+//START @ 11:17AM 12-06-2021 //
+11:17AM - Updated Index page and HomeController
+11:33AM - Pushed to GitHub
+\\END @ 11:33AM - 12-06-2021 \\
